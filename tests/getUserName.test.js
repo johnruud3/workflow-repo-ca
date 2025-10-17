@@ -1,5 +1,5 @@
 /* @vitest-environment jsdom */
-import { describe, it, expect } from "../node_modules/vitest";
+import { describe, it, expect } from "vitest";
 import { saveUser, getUsername, clearStorage } from "../js/utils/storage.js";
 
 describe("getUsername", () => {
