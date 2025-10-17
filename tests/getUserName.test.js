@@ -1,6 +1,6 @@
 /* @vitest-environment jsdom */
-import { describe, it, expect } from "vitest";
-import { saveUser, getUsername, clearStorage } from "./storage.js";
+import { describe, it, expect } from "../node_modules/vitest";
+import { saveUser, getUsername, clearStorage } from "../js/utils/storage.js";
 
 describe("getUsername", () => {
     it("should return the username from storage", () => {

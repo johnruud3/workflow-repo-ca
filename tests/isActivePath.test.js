@@ -1,5 +1,5 @@
-import { describe, it, expect } from "vitest";
-import { isActivePath } from "./userInterface.js";
+import { describe, it, expect } from "../node_modules/vitest";
+import { isActivePath } from "../js/utils/userInterface.js";
 
 
 // If true the link should be active and get the correct styling
