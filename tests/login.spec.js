@@ -4,8 +4,13 @@ const EMAIL = process.env.VITE_LOGIN_EMAIL;
 const PASSWORD = process.env.VITE_LOGIN_PASSWORD;
 
 // Test 1: User can successfully log in with valid credentials from environment variables
-test('User can successfully log in with valid credentials', async ({ page }) => {
-  test.skip(!EMAIL || !PASSWORD, 'VITE_LOGIN_EMAIL and VITE_LOGIN_PASSWORD must be set in a .env file');
+test('User can successfully log in with valid credentials', async ({
+  page,
+}) => {
+  test.skip(
+    !EMAIL || !PASSWORD,
+    'VITE_LOGIN_EMAIL and VITE_LOGIN_PASSWORD must be set in a .env file'
+  );
 
   await page.goto('/login/');
   await page.locator('input[name="email"]').fill(EMAIL);
@@ -17,7 +22,9 @@ test('User can successfully log in with valid credentials', async ({ page }) => 
 });
 
 // Test 2: User sees an error message with invalid credentials
-test('User sees an error message with invalid credentials', async ({ page }) => {
+test('User sees an error message with invalid credentials', async ({
+  page,
+}) => {
   await page.goto('/login/');
   await page.locator('input[name="email"]').fill('invalid@example.com');
   await page.locator('input[name="password"]').fill('wrongpassword');
@@ -31,6 +38,5 @@ test('User sees an error message with invalid credentials', async ({ page }) => 
   // Should stay on login page
   await expect(page).toHaveURL('/login/');
 });
-
 
 // NOTE: Test and look at the warning for login test with e2e
