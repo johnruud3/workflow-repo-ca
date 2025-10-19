@@ -1,0 +1,8 @@
+# Run ESLint (ignore CSS and other non-JS files)
+npx eslint "**/*.{js,mjs}" --fix
+
+# Run Prettier
+npx prettier --write .
+
+# Run tests
+npm test

@@ -20,12 +20,18 @@ VITE_LOGIN_PASSWORD=
 
 ## Whats installed for testing:
 
+- Huskey - for pre-commit testing
 - eslint - for code public or individual quality testing
 - vitest - for unit testing
 - playwright  - for E2E testing
 
 
 ## Commands for testing:
+
+**Huskey will run the following commands before each commit:**
+- npx eslint . --fix
+- npx prettier --write .
+- npm test
 
 **Unit Tests**
 - npm test - runs vitest
@@ -35,6 +41,17 @@ VITE_LOGIN_PASSWORD=
 - npm run test:e2e - runs playwright e2e tests
 - npm run test:e2e:ui - runs playwright e2e tests in headed mode ("Debug" mode)
 - npm run test:e2e:headed - runs playwright e2e tests in headed mode (Automatically)
+
+## Code Quality Commands:
+
+**Linting**
+- npx eslint . --fix - runs ESLint and automatically fixes issues (Code quality and potential bugs)
+
+**Formatting**
+- npx prettier --write . - formats all code with Prettier (line breaks, quote styles, etc.)
+
+**Pre-commit Hooks**
+- Husky are used to set up pre-commit hooks to automatically run testing and checks before each commit
 
 
 ## Test types:
