@@ -24,7 +24,7 @@ VITE_LOGIN_PASSWORD=
 
 ## Commands for testing:
 
-**Huskey will run the following commands before each commit:**
+**Huskey will run the following commands before each commit (pre-commit):**
 
 - npx eslint . --fix
 - npx prettier --write .
