@@ -9,7 +9,7 @@ describe("isActivePath", () => {
   });
 
   it("should return true when current path matches href exactly (non-root)", () => {
-    expect(isActivePath("/register", "/register")).toBe(true);
+    expect(isActivePath("/register/", "/register/")).toBe(true);
   });
 
   it("should return true for root path '/' when current path is '/index.html'", () => {
@@ -21,6 +21,6 @@ describe("isActivePath", () => {
   });
 
   it("should return false when paths don't match", () => {
-    expect(isActivePath("/login", "/register")).toBe(false);
+    expect(isActivePath("/login/", "/register/")).toBe(false);
   });
 });
